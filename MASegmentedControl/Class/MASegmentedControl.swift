@@ -269,6 +269,8 @@ public class MASegmentedControl: UIControl {
         thumbView.frame = CGRect(x: thumbViewPositionX, y: thumbViewPositionY, width: thumbViewWidth, height: thumbViewHeight)
         thumbView.layer.cornerRadius = roundedControl ? thumbViewHeight / 2 : 1.0
         thumbView.backgroundColor = thumbViewColor
+        
+        fillEqually ?  moveThumbView(at: selectedSegmentIndex) : moveThumbViewFillEquallyFalse(at: selectedSegmentIndex)
     }
     
     //4 MARK: BUTTONS LAYOUTS
